@@ -248,15 +248,31 @@ main {
     border: #7b8dab solid 1px;
     width: 100%;
     margin-top: 1rem;
+
+    position: relative;
 }
 
 .item-description {
     grid-column: span 2;
+}
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
+.item-description p {
+   margin: 1rem 0 1rem; 
+}
+
+.trash-btn {
+    background-color: transparent;
+    border: none;
+
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+
+    transition: 0.2s;
+}
+
+.trash-btn:active {
+    transform: scale(0.95);
 }
 
 .item-price p {
