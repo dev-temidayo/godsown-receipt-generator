@@ -5,7 +5,6 @@ const mobileMenu = document.getElementById("mobile-menu");
 // Toggle dropdown when clicking 3-dots
 toggleBtn.addEventListener("click", () => {
     mobileMenu.classList.toggle("is-active");
-    console.log("Toggle button fired")
 });
 
 // Close dropdown when clicking outside
@@ -14,4 +13,3 @@ document.addEventListener("click", (e) => {
         mobileMenu.classList.remove("is-active");
     }
 });
-

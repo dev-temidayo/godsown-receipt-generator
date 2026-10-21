@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="app.css">
+    <title>Invoice</title>
+</head>
+<body class="container">
+    <div class="printout">
+        <div class="logo-background">
+            <div class="logo-details">
+                <img class="logo" src="images/logo.png" alt="logo">
+                <h5 class="logo-text">GOD'S OWN</h5>
+                <h5 class="logo-text">Enterprises</h5>
+            </div>
+
+            <div class="terms-details-container">
+                <h6 class="terms-heading">TERMS & CONDITIONS</h6>
+                <p class="terms-text">
+                    <span id="payment-percentage">50%</span> upfront payment required. <br> Goods or services rendered are non-refundable after final delivery confirmation.
+                </p>
+            </div>
+        </div>
+
+        <main>
+            <h2 class="invoice-heading">
+                INVOICE
+            </h2>
+            <h4 class="invoice-to-text">
+                Invoice To
+            </h4>
+            <h3 id="client-name" class="client-name">
+                Abradi Opas Kim
+            </h3>
+
+            <div class="client-details">
+                <div class="details-icon">
+                    <i class="fa-solid fa-phone fa-2xl" style="color: #000000;"></i>
+                    <i class="fa-solid fa-location-dot fa-2xl" style="color: #000000;"></i>
+                </div>
+
+                <div class="details-text">
+                    <p id="client-number">+234-806-255-4720</p>
+                    <p id="client-address">1, Beco Street, Off Babaponmile Street, Mangoro, Ikeja, Lagos.</p>
+                </div>
+
+                <div class="invoice-details">
+                    <h6>
+                        Invoice No:
+                    </h6>
+                    <p id="invoice-number">0123 456 789</p>
+                </div>
+
+                <div class="date-details">
+                    <h6>Date</h6>
+                    <p>16 Oct 2026</p>
+                </div>
+            </div>
+
+            <div class="item-list-container">
+                <table>
+                    <tr class="table-head">
+                        <th>ITEM DESCRIPTION</th>
+                        <th>UNIT PRICE</th>
+                        <th>QUANTITY</th>
+                        <th>AMOUNT</th>
+                    </tr>
+                    <tr class="gray-cells">
+                        <td>Event Planning & Coordination Services</td>
+                        <td>₦500,000</td>
+                        <td>2</td>
+                        <td>₦1,000,000</td>
+                    </tr>
+                    <tr>
+                        <td>Sound System & Stage Lighting Setup</td>
+                        <td>₦350,000</td>
+                        <td>2</td>
+                        <td>₦700,000</td>
+                    </tr>
+                    <tr class="gray-cells">
+                        <td>Logistics & Security Management</td>
+                        <td>₦150,000</td>
+                        <td>2</td>
+                        <td>₦300,000</td>
+                    </tr>
+                    <tr>
+                        <td>Sound System & Stage Lighting Setup</td>
+                        <td>₦350,000</td>
+                        <td>2</td>
+                        <td>₦700,000</td>
+                    </tr>
+                    <tr class="gray-cells">
+                        <td>Logistics & Security Management</td>
+                        <td>₦150,000</td>
+                        <td>2</td>
+                        <td>₦300,000</td>
+                    </tr>
+                    <tr>
+                        <td class="align-right" colspan="3">TOTAL</td>
+                        <td><span class="currency">₦</span><span id="total-cost">2,000,000</span></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="closing-main">
+                <div class="payment-details">
+                    <h6>TOTAL</h6>
+                    <h5><span class="currency">₦</span><span id="total-cost">2,000,000</span></h5>
+                    <h6>Payment Method</h6>
+                    <h6 class="payment-method" id="payment-method">Payment via bank transfer</h6>
+                </div>
+
+                <div class="personnel-details">
+                    <h5 class="personnel-name" id="personnel-name">Lukman Toluwani</h5>
+                    <h6 class="personnel-badge" id="personnel-badge">MANAGER</h6>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="left-section">
+                <i class="fa-solid fa-phone fa-2xl" style="color: #000000;"></i>
+                <p class="number">+234-806-255-4720</p>
+                <i class="fa-solid fa-envelope fa-2xl" style="color: #000000;"></i>
+                <p>godsownevents@gmail.com</p>
+            </div>
+
+            <div class="right-section">
+                <i class="fa-brands fa-whatsapp fa-2xl" style="color: #000000;"></i>
+                <p class="number">+234-806-255-4720</p>
+                <i class="fa-solid fa-location-dot fa-2xl" style="color: #000000;"></i>
+                <p>godsownevents@gmail.com</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script type="module" src="script.js"></script>
+</body>
+</html>
