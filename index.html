@@ -37,9 +37,9 @@
                     <i class="fa-solid fa-rotate-left" style="color: #ffd98c;"></i>
                     Reset
                 </button>
-                <button class="btn btn-secondary">
-                    <i class="fa-solid fa-print" style="color: #243757;"></i>
-                    Print/Export PDF
+                <button id="print-btn" class="btn btn-secondary">
+                    <i class="fa-solid fa-paper-plane style="color: #243757;"></i>
+                    Generate Invoice
                 </button>
             </div>
 
@@ -52,7 +52,7 @@
             <div id="mobile-menu" class="mobile-dropdown">
                 <button class="btn btn-primary">Save Draft</button>
                 <button class="btn btn-primary">Reset</button>
-                <button class="btn btn-secondary">Print/Export PDF</button>
+                <button id="print-btn" class="btn btn-secondary">Generate Invoice</button>
             </div>
         </header>
 
@@ -70,40 +70,43 @@
 
                 <div class="info-box-grid">
                     <div class="name-field">
-                        <p>
+                        <label for="client-name-input">
                             Client Name
-                        </p>
-                        <input class="input input-primary" type="text" placeholder="e.g., Lukman Temidayo">
+                        </label>
+                        <input id="client-name-input" class="input input-primary" type="text" placeholder="e.g., Lukman Temidayo">
                     </div>
                     <div class="phone-field">
-                        <p>
+                        <label for="client-phone-input">
                             Client Phone
-                        </p>
-                        <input class="input input-primary" type="tel" placeholder="e.g., +234-806-255-4720">
+                        </label>
+                        <input id="client-phone-input" class="input input-primary" type="tel" placeholder="e.g., +234-806-255-4720">
                     </div>
                     <div class="invoice-no-field">
-                        <p>
+                        <label for="invoice-no-input">
                             Invoice No.
-                        </p>
-                        <input class="input input-primary" type="number" placeholder="e.g., 0123 456 789">
+                        </label>
+                        <input id="invoice-no-input" class="input input-primary" type="text" placeholder="e.g., 0123 456 789">
                     </div>
                     <div class="date-field">
-                        <p>
+                        <label for="invoice-date-input">
                             Invoice Date
-                        </p>
-                        <input class="input input-primary" type="date">
+                        </label>
+                        <input id="invoice-date-input" class="input input-primary" type="date">
                     </div>
                     <div class="currency-field">
-                        <p>
-                            Currency Symbol
-                        </p>
-                        <input class="input input-primary" type="text" placeholder="e.g., Naira (₦)">
+                        <label for="currency-input">Currency Symbol</label>
+                        <select id="currency-input" class="select select-primary">
+                            <option value="₦">Naira (₦)</option>
+                            <option value="$">USD ($)</option>
+                            <option value="£">GBP (£)</option>
+                            <option value="€">EUR (€)</option>
+                        </select>
                     </div>
                     <div class="address-field">
-                        <p>
+                        <label for="client-address-input">
                             Client Address
-                        </p>
-                        <input class="input input-primary" type="text" placeholder="e.g., 1, Beco Street, Off Babaponmile Street, Mangoro, Ikeja, Lagos.">
+                        </label>
+                        <input id="client-address-input" class="input input-primary" type="text" placeholder="e.g., 1, Beco Street, Off Babaponmile Street, Mangoro, Ikeja, Lagos.">
                     </div>
                 </div>
             </div>
@@ -186,36 +189,36 @@
                 </h6>
 
                 <div class="info-box-grid">
-                    <div class="name-field">
-                        <p>
+                    <div>
+                        <label for="payment-method">
                             Payment Method Line
-                        </p>
-                        <input class="input input-primary" type="text" placeholder="e.g., Payment by bank transfer">
+                        </label>
+                        <input id="payment-method" class="input input-primary" type="text" placeholder="e.g., Payment by bank transfer">
                     </div>
-                    <div class="phone-field">
-                        <p>
+                    <div>
+                        <label for="signatory-name">
                             Signatory Name
-                        </p>
-                        <input class="input input-primary" type="text" placeholder="e.g., Lukman Temidayo">
+                        </label>
+                        <input id="signatory-name" class="input input-primary" type="text" placeholder="e.g., Lukman Temidayo">
                     </div>
-                    <div class="invoice-no-field">
-                        <p>
+                    <div>
+                        <label for="signatory-badge">
                             Signatory Name Badge
-                        </p>
-                        <input class="input input-primary" type="text" placeholder="e.g., Manager">
+                        </label>
+                        <input id="signatory-badge" class="input input-primary" type="text" placeholder="e.g., Manager">
                     </div>
-                    <div class="date-field">
-                        <p>
+                    <div>
+                        <label for="percentage-pay">
                             Upfront Paymnent Percentage
-                        </p>
-                        <input class="input input-primary" type="number" placeholder="e.g., 50">
+                        </label>
+                        <input id="percentage-pay" class="input input-primary" type="number" placeholder="e.g., 50">
                     </div>
                 </div>
             </div>
 
-            <button class="btn btn-secondary">
-                <i class="fa-solid fa-print" style="color: #243757;"></i>
-                Print/Export PDF
+            <button id="print-btn" class="btn btn-secondary">
+                <i class="fa-solid fa-paper-plane style="color: #243757;"></i>
+                Generate Invoice
             </button>
         </main>
     </div>

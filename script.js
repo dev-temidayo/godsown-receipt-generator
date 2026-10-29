@@ -13,3 +13,20 @@ document.addEventListener("click", (e) => {
         mobileMenu.classList.remove("is-active");
     }
 });
+
+// Interactive Receipt Generator
+
+const clientNameInput = document.getElementById("client-name-input");
+const clientPhoneInput = document.getElementById("client-phone-input");
+const invoiceNumInput = document.getElementById("invoice-no-input");
+const invoiceDateInput = document.getElementById("invoice-date-input");
+const currencyInput = document.getElementById("currency-input");
+const clientAddressInput = document.getElementById("client-address-input");
+
+const printBtn = document.getElementById("print-btn");
+
+const clientNameDisplay = document.getElementById("client-name");
+const clientPhoneDisplay = document.getElementById("client-phone");
+const clientAddressDisplay = document.getElementById("client-address");
+const invoiceNoDisplay = document.getElementById("invoice-number");
+const invoiceDateDisplay = document.getElementById("invoice-date");

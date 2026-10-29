@@ -26,7 +26,11 @@ h6 {
 p {
     font-size: 1.6rem;
     color: #7b8dab;
-    margin: 1rem 0 0.75rem;
+}
+
+label {
+    font-size: 1.6rem;
+    color: #7b8dab;
 }
 
 i {
@@ -89,6 +93,7 @@ i {
     border-radius: 9px;
     border: #7b8dab 1px solid;
     padding: 1.5rem 1.5rem;
+    margin: 0.75rem 0 1rem;
 
     color: white;
     font-family: "Montserrat", sans-serif;
@@ -100,6 +105,26 @@ i {
 }
 
 .input-secondary {
+    background-color: #243757;
+}
+
+.select {
+    width: 100%;
+    border-radius: 9px;
+    border: #7b8dab 1px solid;
+    padding: 1.5rem 1.5rem;
+    margin: 0.75rem 0 1rem;
+
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6rem;
+}
+
+.select-primary {
+    background-color: #1e293b;
+}
+
+.select-secondary {
     background-color: #243757;
 }
 
@@ -183,6 +208,8 @@ main {
 .client-header-text {
     color: #ffd98c;
     font-weight: 600;
+
+    margin-bottom: 1rem;
 }
 
 .info-box-grid {
@@ -211,6 +238,8 @@ main {
 .line-items-text {
     color: #ffd98c;
     font-weight: 600;
+
+    margin-bottom: 1rem;
 }
 
 .info-box-flex {
@@ -282,6 +311,8 @@ main {
 .payment-details-text {
     color: #ffd98c;
     font-weight: 600;
+
+    margin-bottom: 1rem;
 }
 
 /* RESPONSIVE DESIGN */
