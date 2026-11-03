@@ -10,17 +10,34 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // Button Controls
 const resetBtn = document.getElementById("reset-btn");
+const resetBtn1 = document.getElementById("reset-1");
+
 const generateInvoiceBtn = document.getElementById("generate-invoice-btn");
+const generateInvoiceBtn1 = document.getElementById("generate-invoice-1");
+const generateInvoiceBtn2 = document.getElementById("generate-invoice-2");
+
 const addItemBtn = document.getElementById("add-item-btn");
+
 const saveDraftBtn = document.getElementById("save-draft-btn");
+const saveDraftBtn1 = document.getElementById("save-draft-1");
 
 resetBtn.addEventListener("click", resetDefaults);
+resetBtn1.addEventListener("click", resetDefaults);
 
 addItemBtn.addEventListener("click", addNewItem);
 
 saveDraftBtn.addEventListener("click", saveDraft);
+saveDraftBtn1.addEventListener("click", saveDraft);
 
 generateInvoiceBtn.addEventListener("click", () => {
+    readFormInputs();
+    window.location.href = 'reciept.html';
+});
+generateInvoiceBtn1.addEventListener("click", () => {
+    readFormInputs();
+    window.location.href = 'reciept.html';
+});
+generateInvoiceBtn2.addEventListener("click", () => {
     readFormInputs();
     window.location.href = 'reciept.html';
 });
