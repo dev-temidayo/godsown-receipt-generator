@@ -29,16 +29,16 @@
             </div>
 
             <div class="right-section">
-                <button class="btn btn-primary">
+                <button id="save-draft-btn" class="btn btn-primary">
                     <i class="fa-solid fa-floppy-disk" style="color: #ffd98c;"></i>
                     Save Draft
                 </button>
-              <button class="btn btn-primary">
+              <button id="reset-btn" class="btn btn-primary">
                     <i class="fa-solid fa-rotate-left" style="color: #ffd98c;"></i>
                     Reset
                 </button>
-                <button id="print-btn" class="btn btn-secondary">
-                    <i class="fa-solid fa-paper-plane style="color: #243757;"></i>
+                <button id="generate-invoice-btn" class="btn btn-secondary">
+                    <i class="fa-solid fa-paper-plane" style="color: #243757;"></i>
                     Generate Invoice
                 </button>
             </div>
@@ -52,7 +52,7 @@
             <div id="mobile-menu" class="mobile-dropdown">
                 <button class="btn btn-primary">Save Draft</button>
                 <button class="btn btn-primary">Reset</button>
-                <button id="print-btn" class="btn btn-secondary">Generate Invoice</button>
+                <a href="reciept.html" id="print-btn" class="btn btn-secondary">Generate Invoice</a>
             </div>
         </header>
 
@@ -73,25 +73,25 @@
                         <label for="client-name-input">
                             Client Name
                         </label>
-                        <input id="client-name-input" class="input input-primary" type="text" placeholder="e.g., Lukman Temidayo">
+                        <input id="client-name-input" class="input input-primary" type="text" placeholder="Abradi Opas Kim" required>
                     </div>
                     <div class="phone-field">
                         <label for="client-phone-input">
                             Client Phone
                         </label>
-                        <input id="client-phone-input" class="input input-primary" type="tel" placeholder="e.g., +234-806-255-4720">
+                        <input id="client-phone-input" class="input input-primary" type="tel" placeholder="+234-806-255-4720" required>
                     </div>
                     <div class="invoice-no-field">
                         <label for="invoice-no-input">
                             Invoice No.
                         </label>
-                        <input id="invoice-no-input" class="input input-primary" type="text" placeholder="e.g., 0123 456 789">
+                        <input id="invoice-no-input" class="input input-primary" type="text" placeholder="0123 456 789" required>
                     </div>
                     <div class="date-field">
                         <label for="invoice-date-input">
                             Invoice Date
                         </label>
-                        <input id="invoice-date-input" class="input input-primary" type="date">
+                        <input id="invoice-date-input" class="input input-primary" type="text" placeholder="16 Oct 2026" required>
                     </div>
                     <div class="currency-field">
                         <label for="currency-input">Currency Symbol</label>
@@ -106,7 +106,7 @@
                         <label for="client-address-input">
                             Client Address
                         </label>
-                        <input id="client-address-input" class="input input-primary" type="text" placeholder="e.g., 1, Beco Street, Off Babaponmile Street, Mangoro, Ikeja, Lagos.">
+                        <input id="client-address-input" class="input input-primary" type="text" placeholder="1, Beco Street, Off Babaponmile Street, Mangoro, Ikeja, Lagos." required>
                     </div>
                 </div>
             </div>
@@ -117,8 +117,8 @@
                     LINE ITEMS
                 </h6>
 
-                <div class="info-box-flex">
-                    <div class="item">
+                <div id="items-container" class="info-box-flex">
+                    <!-- <div class="item">
                         <div class="item-description">
                             <p>Item Description</p>
                             <input class="input input-secondary" type="text">
@@ -174,10 +174,10 @@
                             <p>Quantity</p>
                             <input class="input input-secondary" type="text">
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
-                <button class="btn btn-secondary add-item-btn">
+                <button id="add-item-btn" class="btn btn-secondary add-item-btn">
                     Add item
                 </button>
             </div>
@@ -190,39 +190,40 @@
 
                 <div class="info-box-grid">
                     <div>
-                        <label for="payment-method">
+                        <label for="payment-method-input">
                             Payment Method Line
                         </label>
-                        <input id="payment-method" class="input input-primary" type="text" placeholder="e.g., Payment by bank transfer">
+                        <input id="payment-method-input" class="input input-primary" type="text" placeholder="Payment via bank transfer" required>
                     </div>
                     <div>
-                        <label for="signatory-name">
+                        <label for="signee-name-input">
                             Signatory Name
                         </label>
-                        <input id="signatory-name" class="input input-primary" type="text" placeholder="e.g., Lukman Temidayo">
+                        <input id="signee-name-input" class="input input-primary" type="text" placeholder="Lukman Toluwani" required>
                     </div>
                     <div>
-                        <label for="signatory-badge">
+                        <label for="signee-badge-input">
                             Signatory Name Badge
                         </label>
-                        <input id="signatory-badge" class="input input-primary" type="text" placeholder="e.g., Manager">
+                        <input id="signee-badge-input" class="input input-primary" type="text" placeholder="Manager" required>
                     </div>
                     <div>
-                        <label for="percentage-pay">
+                        <label for="percentage-pay-input">
                             Upfront Paymnent Percentage
                         </label>
-                        <input id="percentage-pay" class="input input-primary" type="number" placeholder="e.g., 50">
+                        <input id="percentage-pay-input" class="input input-primary" type="number" placeholder="50" min="0" max="100" required>
                     </div>
                 </div>
             </div>
 
-            <button id="print-btn" class="btn btn-secondary">
-                <i class="fa-solid fa-paper-plane style="color: #243757;"></i>
+            <button id="generate-invoice-btn" class="btn btn-secondary">
+                <i class="fa-solid fa-paper-plane" style="color: #243757;"></i>
                 Generate Invoice
             </button>
         </main>
     </div>
     
+    <script src="header.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -26,6 +26,10 @@ p {
     font-size: 1.6rem;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* COMPONENTS */
 
 .btn {
@@ -330,5 +334,34 @@ footer {
 @media (max-width: 34rem) {
     html {
         font-size: 25%;
+    }
+}
+
+@media print {
+    body {
+        background: white !important;
+        color: black !important;
+    }
+
+    .no-print {
+        display: none !important;
+    }
+
+    .printout {
+        box-shadow: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: 100vh !important;
+        border: none !important;
+    }
+
+    @page {
+        size: A4 portrait;
+        margin: 0;
+    }
+
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
     }
 }

@@ -28,6 +28,10 @@ p {
     color: #7b8dab;
 }
 
+a {
+    text-decoration: none;
+}
+
 label {
     font-size: 1.6rem;
     color: #7b8dab;
