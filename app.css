@@ -79,9 +79,9 @@ a {
 
 .preview-toolbar {
     background-color: #243757;
-    padding: 12px 20px;
+    padding: 1.2rem 2rem;
     margin: 1rem auto;
-    border-radius: 10px;
+    border-radius: 1rem;
     border: 1px solid #7b8dab;
     width: 100%;
     max-width: 95.16rem;
@@ -153,7 +153,6 @@ a {
 main {
     display: flex;
     flex-direction: column;
-    border-bottom: #243757 2px solid;
 
     margin-bottom: 2rem;
 }
@@ -257,8 +256,6 @@ td {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-
-    margin-bottom: 3rem;
 }
 
 .payment-method {
@@ -281,12 +278,19 @@ td {
 }
 
 footer {
-    margin-left: -25rem;
-    padding: 6rem 0.5rem;
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 105rem;
+
+    border-top: #243757 2px solid;
+    padding: 0 2rem
 }
 
 .left-section {

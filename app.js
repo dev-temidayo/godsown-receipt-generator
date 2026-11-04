@@ -12,6 +12,11 @@ if (!data) {
     const editFormBtn = document.getElementById("edit-form-btn");
     const printBtn = document.getElementById("print-btn");
 
+    editFormBtn.addEventListener("click", () => {
+        
+        window.location.href = 'index.html';
+    });
+
     printBtn.addEventListener("click", () => {
         window.print();
     })
@@ -21,7 +26,7 @@ function renderInvoicePreview () {
     document.getElementById("client-name-display").innerText = data.clientName || "Client Name";
     document.getElementById("client-phone-display").innerText = data.clientPhone || "-";
     document.getElementById("client-address-display").innerText = data.clientAddress || "-";
-    document.getElementById("invoice-number-display").innerText = data.invoiceNo || "-";
+    // document.getElementById("invoice-number-display").innerText = data.invoiceNo || "-";
     document.getElementById("invoice-date-display").innerText = data.invoiceDate || "-";
     document.getElementById("pay-percentage-display").innerText = data.percentagePay || "-";
     document.getElementById("payment-method-display").innerText = data.paymentMethod || "-";

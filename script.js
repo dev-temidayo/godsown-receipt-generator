@@ -1,12 +1,15 @@
 // INTERACTIVE RECIEPT GENERATOR
 window.addEventListener('DOMContentLoaded', () => {
-    const saved = localStorage.getItem('generatedInvoiceData');
+    const saved = JSON.parse(localStorage.getItem('generatedInvoiceData'));
     if (saved) {
-        try { invoiceData = JSON.parse(saved); } catch(e) {}
+        invoiceData = saved;
+        populateForm();
+        renderFormItems();
     }
-    populateForm();
-    renderFormItems();
 });
+
+// Date display
+document.getElementById("invoice-date-input").valueAsDate = new Date();
 
 // Button Controls
 const resetBtn = document.getElementById("reset-btn");
@@ -103,7 +106,7 @@ let invoiceData = {
     clientName: document.getElementById("client-name-input").value,
     clientPhone: document.getElementById("client-phone-input").value,
     clientAddress: document.getElementById("client-address-input").value,
-    invoiceNo: document.getElementById("invoice-no-input").value,
+    // invoiceNo: document.getElementById("invoice-no-input").value,
     invoiceDate: document.getElementById("invoice-date-input").value,
     currency: document.getElementById("currency-input").value,
     percentagePay: document.getElementById("percentage-pay-input").value,
@@ -124,7 +127,7 @@ function populateForm() {
     document.getElementById("client-name-input").value = invoiceData.clientName;
     document.getElementById("client-phone-input").value = invoiceData.clientPhone;
     document.getElementById("client-address-input").value = invoiceData.clientAddress;
-    document.getElementById("invoice-no-input").value = invoiceData.invoiceNo;
+    // document.getElementById("invoice-no-input").value = invoiceData.invoiceNo;
     document.getElementById("invoice-date-input").value = invoiceData.invoiceDate;
     document.getElementById("currency-input").value = invoiceData.currency;
     document.getElementById("percentage-pay-input").value = invoiceData.percentagePay;
@@ -138,7 +141,7 @@ function readFormInputs () {
     invoiceData.clientName = document.getElementById("client-name-input").value;
     invoiceData.clientPhone = document.getElementById("client-phone-input").value;
     invoiceData.clientAddress = document.getElementById("client-address-input").value;
-    invoiceData.invoiceNo = document.getElementById("invoice-no-input").value;
+    // invoiceData.invoiceNo = document.getElementById("invoice-no-input").value;
     invoiceData.invoiceDate = document.getElementById("invoice-date-input").value;
     invoiceData.currency = document.getElementById("currency-input").value;
     invoiceData.percentagePay = document.getElementById("percentage-pay-input").value;
@@ -161,7 +164,7 @@ function resetDefaults () {
         clientName: "Abradi Opas Kim",
         clientPhone: "+234-806-255-4720",
         clientAddress: "1, Beco Street, Off Babaponmile Street, Mangoro, Ikeja, Lagos.",
-        invoiceNo: "0123 456 789",
+        // invoiceNo: "0123 456 789",
         invoiceDate: "16 Oct 2026",
         currency: "₦",
         percentagePay: "50",

@@ -81,17 +81,20 @@
                         </label>
                         <input id="client-phone-input" class="input input-primary" type="tel" placeholder="+234-806-255-4720" required>
                     </div>
-                    <div class="invoice-no-field">
-                        <label for="invoice-no-input">
-                            Invoice No.
+                    <div class="invoice-type-field">
+                        <label for="invoice-type-input">
+                            Invoice Type
                         </label>
-                        <input id="invoice-no-input" class="input input-primary" type="text" placeholder="0123 456 789" required>
+                        <select id="invoice-type-input" class="select select-primary">
+                            <option value="Event Planning and Management">Event Planning and Management</option>
+                            <option value="Cargo Logistics">Cargo Logistics</option>
+                        </select>
                     </div>
                     <div class="date-field">
                         <label for="invoice-date-input">
                             Invoice Date
                         </label>
-                        <input id="invoice-date-input" class="input input-primary" type="text" placeholder="16 Oct 2026" required>
+                        <input id="invoice-date-input" class="input input-primary" type="date" required>
                     </div>
                     <div class="currency-field">
                         <label for="currency-input">Currency Symbol</label>
@@ -193,7 +196,12 @@
                         <label for="payment-method-input">
                             Payment Method Line
                         </label>
-                        <input id="payment-method-input" class="input input-primary" type="text" placeholder="Payment via bank transfer" required>
+                        <select id="payment-method-input" class="select select-primary">
+                            <option value="Payment via Bank Transfer">Payment via Bank Transfer</option>
+                            <option value="Payment via Cash">Payment via Cash</option>
+                            <option value="Payment via Debit Card">Payment via Debit Card</option>
+                            <option value="Payment via Cheque">Payment via Cheque</option>
+                        </select>
                     </div>
                     <div>
                         <label for="signee-name-input">
